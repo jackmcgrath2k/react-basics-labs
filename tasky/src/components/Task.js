@@ -6,14 +6,14 @@ const Task = (props) => {
         <div className="card">
             <p className="title">{props.title}</p>
             <p>Due: {props.deadline}</p>
-            <p>{props.desc}</p>
+            <p>{props.description}</p>
         </div>
     )
     return (
         <div>
             <p>{props.title}</p>
             <p>Due: {props.deadline}</p>
-            <p>{props.desc}</p>
+            <p>{props.description}</p>
         </div>
     )
 
