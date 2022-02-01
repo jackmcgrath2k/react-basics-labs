@@ -1,4 +1,8 @@
-import Box from '@mui/material/Box';
+
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import Chip from '@mui/material/Chip';import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import React from "react";
@@ -36,6 +40,21 @@ const AddTaskForm = (props) => {
       </div>
       <div>
         <TextField
+          required
+          select
+          id="outlined-required"
+          name="priority"
+          label="Task Priority"
+          InputLabelProps={{ shrink: true }}
+          onChange={(event) => props.change(event)}
+        >
+            <MenuItem value = "Low">Low</MenuItem>
+            <MenuItem value = "Medium">Medium</MenuItem>
+            <MenuItem value = "High">High</MenuItem>
+            </TextField>
+      </div>
+      <div>
+        <TextField
           name="description"
           id="outlined-multiline-static"
           label="Task Details"
@@ -45,6 +64,7 @@ const AddTaskForm = (props) => {
           onChange={(event) => props.change(event)}
         />
       </div>
+
       <div>
         <Button 
           type="submit"

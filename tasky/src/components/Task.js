@@ -1,3 +1,7 @@
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import Chip from '@mui/material/Chip';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -51,6 +55,14 @@ const Task = (props) => {
             >
                 {props.description}
             </Typography>
+            <Typography
+                component="p"
+                variant="subtitle1"
+                align="center"
+                sx={{ fontStyle: 'italic'}}
+            >
+                {props.priority}
+            </Typography>
         </CardContent>
         <CardActions sx={{justifyContent: 'space-between', padding: '20px'}}>
             <Button variant="contained" size="small" color="success" onClick={props.markDone}>
@@ -64,5 +76,7 @@ const Task = (props) => {
 </Grid>
    )
 }
+
+
 
 export default Task;
